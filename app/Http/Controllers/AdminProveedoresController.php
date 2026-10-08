@@ -34,10 +34,10 @@ class AdminProveedoresController extends Controller
      */
     public function guardar(Request $request)
     {
-        $idproveedor = (int)$request->input('idproveedor', 0);
-        $nombre      = trim($request->input('nombre', ''));
-        $telefono    = trim($request->input('telefono', ''));
-        $correo      = trim($request->input('correo', ''));
+        $idproveedor = (int)$request->input('idusuario', 0);
+        $nombre      = trim($request->input('usuarios', ''));
+        $telefono    = trim($request->input('phone', ''));
+        $correo      = trim($request->input('meail', ''));
 
         if (empty($nombre)) {
             return redirect()->route('admin.proveedores.index');
